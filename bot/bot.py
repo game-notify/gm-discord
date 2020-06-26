@@ -1,10 +1,13 @@
 import os
 import discord
 import asyncio
+import requests
 from bot.commands import Command
+from bot.Epic import Epic
+from discord.ext import commands
 
-client = discord.Client()
 
+client = commands.Bot(command_prefix='!')
 
 @client.event
 @asyncio.coroutine
@@ -53,12 +56,13 @@ class DiscordBot(object):
 
     def set_token(self):
         # Check if BOT_TOKEN os var exists
-        if os.getenv('BOT_TOKEN') is not None:
-            self.token = os.getenv('BOT_TOKEN')
-            print('Using bot token from environment file')
-        else:
+        if os.getenv('BOT_TOKEN') is None:
             # Ask user for bot token
             self.token = input('Bot Token:')
+        else:
+            self.token = os.getenv('BOT_TOKEN')
+            print('Using bot token from environment file')
+            
 
     def run(self):
         client.run(self.token)
