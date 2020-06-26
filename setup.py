@@ -4,14 +4,14 @@ setup(
     name='DiscordBot',
     version='0.1dev',
 
-    description='Python 3.4+ Discord Bot boilerplate project',
+    description='Python 3.5+ Discord Bot for free game offers on Steam and Epic Games Store',
 
     # The project's main homepage.
-    url='https://www.IamGregAmato.com',
+    url='https://github.com/game-notify',
 
     # Author details.
-    author='Greg Amato',
-    author_email='amatobahn@gmail.com',
+    author='Kaspar Wetsch',
+    author_email='kaspar.wetsch@gmx.de',
 
     # License
     license='MIT',
@@ -29,9 +29,11 @@ setup(
         'License :: MIT',
 
         # Supported Python versions:
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6'
+        'Programming Language :: Python :: 3.7'
+        'Programming Language :: Python :: 3.8'
+
     ],
 
     # Keywords
