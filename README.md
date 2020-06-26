@@ -1,6 +1,6 @@
-# discord-bot-boilerplate
+# GM-Discord bot
 
-Starting point for creating python based Discord Bot
+Provides commands like `!games` to show free game offers on **Stream** and **Epic Games Store**
 
 ## Requirements
 You need Python 3.4 or later to run discord-bot-boilerplate.
@@ -21,6 +21,7 @@ $ python app.py
 
 ## Authors
 
+* **Kaspar Wetsch** - *GM-API intigration* - [KasparWe](https://github.com/KasparWe)
 * **Greg Amato** - *Initial work* - [Amatobahn](https://github.com/Amatobahn)
 
 ## License
