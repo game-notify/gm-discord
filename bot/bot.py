@@ -25,7 +25,10 @@ def gen_embed(offers):
         embed.add_field(name='\u200b', value='\u200b')
         embed.add_field(name='\u200b', value='\u200b')
         for offer in provider['offers']:
-            embed.add_field(name=offer['title'], value=f'{offer["newPrice"]} [Purchase]({offer["url"]})') #noqa
+            embed.add_field(
+                name=offer['title'], 
+                value=f'{offer["newPrice"]} [Purchase]({offer["url"]})' #noqa: E999
+            )
         # tmp while implementing steam apis
         embed.add_field(name='\u200b', value='\u200b')
         embed.add_field(name='\u200b', value='\u200b')
