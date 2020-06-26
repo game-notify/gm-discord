@@ -35,6 +35,8 @@ def gen_embed(offers):
         embed.add_field(name='\u200b', value='\u200b')
 
         embed.add_field(name='Steam', value='Comming soon')
+        embed.add_field(name='Found a bug?', value='[Report](https://github.com/game-notify/gm-discord/issues)')
+
     embed.set_footer(text='')
 
     return embed
