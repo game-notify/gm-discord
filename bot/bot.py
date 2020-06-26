@@ -12,18 +12,26 @@ def on_ready():
     print('Logged in as: {0} - {1}'.format(client.user.name, client.user.id))
     print('-'*20)
 
+def gen_embed(offers):
+    embed = discord.Embed(
+        title='TOP 10 game offers',
+        url='https://github.com/game-notify/gm-discord'
+        )
+    for provider in offers:
+        embed.add_field(name=provider['name'], value='\u200b')
+        embed.add_field(name='\u200b', value='\u200b')
+        embed.add_field(name='\u200b', value='\u200b')
+        for offer in provider['offers']:
+            embed.add_field(name=offer['title'], value=f'{offer["newPrice"]} [Purchase]({offer["url"]})')
+        # tmp while implementing steam apis
+        embed.add_field(name='\u200b', value='\u200b')
+        embed.add_field(name='\u200b', value='\u200b')
+        embed.add_field(name='\u200b', value='\u200b')
 
-@client.event
-@asyncio.coroutine
-def on_message(message):
-    command = message.content.lower()
-    if message.author == client.user:
-        return
-    elif command == '!':
-        yield from client.send_message(message.channel, '<@{0}>, No command has been passed.'.format(message.author.id))
-    elif command.startswith('!leet'):
-        response = Command.leet_speak(command.replace('!leet', ''))
-        yield from client.send_message(message.channel, '{0}'.format(response))
+        embed.add_field(name='Steam', value='Comming soon')
+    embed.set_footer(text='')
+
+    return embed
 
 
 # Set up the base bot
