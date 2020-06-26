@@ -1,4 +1,4 @@
-import os
+
 from bot.bot import DiscordBot
 
 if __name__ == '__main__':

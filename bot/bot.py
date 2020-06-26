@@ -1,7 +1,6 @@
 import os
 import discord
 import asyncio
-import configparser
 from bot.commands import Command
 
 client = discord.Client()
