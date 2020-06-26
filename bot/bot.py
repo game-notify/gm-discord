@@ -31,9 +31,8 @@ def on_message(message):
 class DiscordBot(object):
     def __init__(self):
         self.token = None
-        self.config = configparser.ConfigParser()
 
-    def create_config(self):
+    def set_token(self):
         # Check if BOT_TOKEN os var exists
         if os.getenv('BOT_TOKEN') is not None:
             self.token = os.getenv('BOT_TOKEN')
@@ -41,21 +40,6 @@ class DiscordBot(object):
         else:
             # Ask user for bot token
             self.token = input('Bot Token:')
-        # Creates base config file
-        self.config.add_section('DiscordBot')
-        self.config.set('DiscordBot', 'token', self.token)
-        with open('{0}\{1}'.format(os.getcwd(), 'config.ini'), 'w') as configfile:
-            self.config.write(configfile)
-
-    def get_token(self):
-        self.config.read('{0}\{1}'.format(os.getcwd(), 'config.ini'))
-        self.token = self.config.get('DiscordBot', 'token')
-
-    def set_token(self, token):
-        self.config.read('{0}\{1}'.format(os.getcwd(), 'config.ini'))
-        self.config.set('DiscordBot', 'token', token)
-        with open('{0}\{1}'.format(os.getcwd(), 'config.ini'), 'w') as configfile:
-            self.config.write(configfile)
 
     def run(self):
         client.run(self.token)
