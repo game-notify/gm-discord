@@ -34,6 +34,18 @@ def gen_embed(offers):
     return embed
 
 
+# Returns 
+@client.command(name='games')
+async def get_games(ctx):
+    epic = Epic()
+    offers = [
+        {
+            'name': 'Epic Games Store',
+            'offers': epic.get_offers()
+        },
+    ]
+    msg = await ctx.send(embed=gen_embed(offers))
+
 # Set up the base bot
 class DiscordBot(object):
     def __init__(self):
