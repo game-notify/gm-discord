@@ -34,8 +34,13 @@ class DiscordBot(object):
         self.config = configparser.ConfigParser()
 
     def create_config(self):
-        # Ask user for bot token
-        self.token = input('Bot Token:')
+        # Check if BOT_TOKEN os var exists
+        if os.getenv('BOT_TOKEN') is not None:
+            self.token = os.getenv('BOT_TOKEN')
+            print('Using bot token from environment file')
+        else:
+            # Ask user for bot token
+            self.token = input('Bot Token:')
         # Creates base config file
         self.config.add_section('DiscordBot')
         self.config.set('DiscordBot', 'token', self.token)
