@@ -1,9 +1,14 @@
 # GM-Discord bot
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+ [![workflows](https://github.com/game-notify/gm-discord/workflows/Python%20flake8/badge.svg)](https://github.com/game-notify/gm-discord/actions?query=workflow%3A%22Python+flake8%22)
+ [![GitHub issues](https://img.shields.io/github/issues/game-notify/gm-discord.svg)](https://github.com/game-notify/gm-discord/issues)
+[![GitHub license](https://img.shields.io/github/license/game-notify/gm-discord.svg)](LICENSE)
+
 
 Provides commands like `!games` to show free game offers on **Stream** and **Epic Games Store**
 
 ## Requirements
-You need Python 3.4 or later to run discord-bot-boilerplate.
+You need Python 3.5 or later to run discord-bot-boilerplate.
 Recommend using Python 3.6+
 Python packages are available at http://www.python.org/getit/
 
